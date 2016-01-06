@@ -7,3 +7,7 @@ su -c "echo 'nvm install' >> /home/vagrant/.bashrc" vagrant
 
 # Ensure the projects directory exists (with the relevant permissions) where you will clone your repositories
 su -c "mkdir -m 777 -p /home/vagrant/projects" vagrant
+
+# Ensure your git settings are on the virtual machine
+git config --global user.email "email@andrewrea.co.uk"
+git config --global user.name "Andrew Rea"
