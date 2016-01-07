@@ -11,3 +11,4 @@ su -c "mkdir -m 777 -p /home/vagrant/projects" vagrant
 # Ensure your git settings are on the virtual machine
 su -c "git config --global user.email 'email@andrewrea.co.uk'" vagrant
 su -c "git config --global user.name 'Andrew Rea'" vagrant
+su -c "git config --global push.default simple" vagrant
