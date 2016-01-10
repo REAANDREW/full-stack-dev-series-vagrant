@@ -11,8 +11,10 @@ Vagrant.configure(2) do |config|
 
     config.vm.provider :virtualbox do |vb|
         vb.name = "full-stack-development-vm"
+        vb.cpus = 2
         vb.memory = "4096"
         vb.gui = true
+        vb.customize ["modifyvm", :id, "--vram", "64"]
     end
 
     config.vm.provision "file", source: "~/.ssh/id_rsa.full-stack-development", destination: "/home/vagrant/.ssh/id_rsa"
